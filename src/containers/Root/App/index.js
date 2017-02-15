@@ -8,6 +8,7 @@ import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import {Login, Logged} from './components';
+import Footer from '../../../components/Footer';
 
 function mapStateToProps(state) {
     return {
@@ -20,6 +21,19 @@ function mapDispatchToProps(dispatch) {
         //logout: () => dispatch(logoutUser()),
     };
 }
+
+const containerStyles = {
+    margin: 0,
+    padding: 0,
+    width: '100%',
+    minHeight: '100%'
+};
+
+const footerStyles = {
+    margin: 0,
+    padding: 0,
+    width: '100%'
+};
 
 class App extends Component{
 
@@ -44,11 +58,17 @@ class App extends Component{
 
         return (
             <MuiThemeProvider muiTheme={/*getMuiTheme(darkBaseTheme)*/ null}>
-                <AppBar
-                    title="UrYouTube"
-                    iconElementLeft={<IconButton><NavigationClose /></IconButton>}
-                    iconElementRight={!this.state.logged ? <Logged /> : <Login />}
-                />
+                <div style={containerStyles}>
+                    <AppBar
+                        title="UrYouTube"
+                        iconElementLeft={<IconButton><NavigationClose /></IconButton>}
+                        iconElementRight={!this.state.logged ? <Logged /> : <Login />}
+                    />
+                    {this.props.children}
+                    <div style={footerStyles}>
+                        <Footer/>
+                    </div>
+                </div>
             </MuiThemeProvider>
         )
     }

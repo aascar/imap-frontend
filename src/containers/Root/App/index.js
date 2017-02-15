@@ -22,11 +22,18 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const containerStyles = {
+const wrapperStyles = {
     margin: 0,
     padding: 0,
     width: '100%',
     minHeight: '100%'
+};
+
+const containerStyles = {
+    margin: 0,
+    padding: 0,
+    width: '100%',
+    minHeight: '300px'
 };
 
 const footerStyles = {
@@ -58,13 +65,15 @@ class App extends Component{
 
         return (
             <MuiThemeProvider muiTheme={/*getMuiTheme(darkBaseTheme)*/ null}>
-                <div style={containerStyles}>
+                <div style={wrapperStyles}>
                     <AppBar
                         title="UrYouTube"
                         iconElementLeft={<IconButton><NavigationClose /></IconButton>}
                         iconElementRight={!this.state.logged ? <Logged /> : <Login />}
                     />
-                    {this.props.children}
+                    <div className="container-fluid" style={containerStyles}>
+                        {this.props.children}
+                    </div>
                     <div style={footerStyles}>
                         <Footer/>
                     </div>

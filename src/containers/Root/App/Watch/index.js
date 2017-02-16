@@ -4,7 +4,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import {  } from './actions';
-import {Video} from './components';
+import {Video, VideoMetrics} from './components';
 
 function mapStateToProps(state) {
     return {
@@ -39,7 +39,7 @@ class Overview extends Component {
                     <Video videoId="rEggfqcRsPw"/>
                 </div>
                 <div className="col-md-4">
-
+                    <VideoMetrics data={{}}/>
                 </div>
             </section>
         );

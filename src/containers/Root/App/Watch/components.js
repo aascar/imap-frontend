@@ -1,3 +1,58 @@
 /**
  * Created by jyothi on 16/2/17.
  */
+import React, {Component, PropTypes} from 'react';
+
+export class Video extends Component{
+
+    constructor(props){
+        super(props);
+        const { height, width } = this.props;
+        this.state = {
+            height: height || '390',
+            width: width || '640',
+            playerVars: {
+                autoplay: 1
+            }
+        }
+    }
+
+    render(){
+        const { videoId } = this.props;
+        return(
+            <div className="video-container">
+                <YouTube
+                    videoId={videoId}
+                    id={"video-id"}
+                    className={"some-class"}
+                    opts={this.state}
+                    onReady={() => {
+
+                    }}
+                    onPlay={() => {
+
+                    }}
+                    onPause={() => {
+
+                    }}
+                    onEnd={() => {
+
+                    }}
+                    onError={() => {
+
+                    }}
+                    onStateChange={() => {
+
+                    }}
+                    onPlaybackRateChange={() => {
+
+                    }}
+                    onPlaybackQualityChange={() => {
+
+                    }}
+                />
+            </div>
+        )
+    }
+
+}

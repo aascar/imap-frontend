@@ -35,13 +35,11 @@ class Overview extends Component {
         const { v } = location.query;
         return (
             <section className="content">
-                <div className="row">
-                    <div className="col-md-8">
-                        <Video videoId="rEggfqcRsPw"/>
-                    </div>
-                    <div className="col-md-4">
+                <div className="col-md-8">
+                    <Video videoId="rEggfqcRsPw"/>
+                </div>
+                <div className="col-md-4">
 
-                    </div>
                 </div>
             </section>
         );

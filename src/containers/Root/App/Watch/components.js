@@ -10,8 +10,8 @@ export class Video extends Component{
         super(props);
         const { height, width } = this.props;
         this.state = {
-            height: height || '390',
-            width: width || '640',
+            /*height: height || '480',
+            width: width || '100%',*/
             playerVars: {
                 autoplay: 1
             }

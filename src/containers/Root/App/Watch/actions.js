@@ -11,7 +11,7 @@ export const getVideoInfo = (videoId) => {
 
             ],
             payload: {
-                promise: getVideoInfoAPI(user, appId, uspType, groupId, filters)
+                promise: getVideoInfoAPI(videoId)
                     .then((res) => {
                         return res;
                     }),

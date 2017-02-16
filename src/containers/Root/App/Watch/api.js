@@ -7,7 +7,7 @@ import { makeDefaultQueryString} from '../../../../utils';
 const VIDEO_INFO_API = "";
 
 export function getVideoInfoAPI(videoId, user) {
-    const url = makeDefaultQueryString(VIDEO_INFO_API, user, appId);
+    const url = makeDefaultQueryString(VIDEO_INFO_API, user);
     const config = {
         method: "GET",
         //body: JSON.stringify(filters)

@@ -2,6 +2,7 @@
  * Created by jyothi on 16/2/17.
  */
 import React, {Component, PropTypes} from 'react';
+import YouTube from 'react-youtube';
 
 export class Video extends Component{
 

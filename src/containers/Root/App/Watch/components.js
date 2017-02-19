@@ -128,7 +128,7 @@ export class Playlist extends Component{
 }
 
 const videoOptionsStyles = {
-    margin: "10px auto auto"
+    margin: "5px auto auto"
 };
 
 export class VideoOptions extends Component {
@@ -147,7 +147,7 @@ export class VideoOptions extends Component {
     render(){
         const {likes, repeats, downloads} = this.props.data;
         return(
-            <div className="container-fluid text-center" style={videoOptionsStyles}>
+            <div className="container-fluid fluid text-center" style={videoOptionsStyles}>
                 <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 
                 </div>
@@ -175,7 +175,7 @@ export class VideoData extends Component {
     render(){
         const {} = this.props;
         return(
-            <div className="container-fluid">
+            <div className="container-fluid fluid">
                 <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <VideoMetrics data={{}}/>
                 </div>

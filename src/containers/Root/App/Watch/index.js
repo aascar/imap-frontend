@@ -4,7 +4,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import {  } from './actions';
-import {Video, VideoMetrics} from './components';
+import {VideoContainer} from './components';
 
 function mapStateToProps(state) {
     return {
@@ -35,11 +35,14 @@ class Overview extends Component {
         const { v } = location.query;
         return (
             <section className="content">
-                <div className="col-md-8">
-                    <Video videoId="rEggfqcRsPw"/>
+                <div className="col-lg-2 col-md-2 visible-lg visible-md">
+
                 </div>
-                <div className="col-md-4">
-                    <VideoMetrics data={{}}/>
+                <div className="col-lg-6 col-md-6 col-sm-7">
+                    <VideoContainer/>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-5">
+
                 </div>
             </section>
         );

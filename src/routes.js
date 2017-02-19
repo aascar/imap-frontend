@@ -5,7 +5,8 @@ import Watch from './containers/Root/App/Watch'
 
 const router =
     <Route path="/" component={Application}>
-        <Route path="watch" component={Watch}/>
+        <IndexRedirect to="watch"/>
+        <Route path="watch" component={Watch} />
     </Route>
 
 export default router;

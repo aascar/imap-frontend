@@ -3,6 +3,11 @@ html, body{
     /*background-color: #f9fafc;*/
 }
 
+.container-fluid{
+    width: 100% !important;
+    padding: 2px !important;
+}
+
 section.content{
     width: 100%;
     padding: 15px;

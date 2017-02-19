@@ -14,6 +14,9 @@ import RaisedButton from 'material-ui/RaisedButton';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import ContentFilter from 'material-ui/svg-icons/content/filter-list';
 import FileFileDownload from 'material-ui/svg-icons/file/file-download';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import ContentAdd from 'material-ui/svg-icons/content/add';
+import Divider from 'material-ui/Divider';
 
 export class Video extends Component{
 
@@ -92,6 +95,42 @@ export class VideoMetrics extends Component {
     }
 }
 
+export class Playlist extends Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+
+        };
+    }
+
+    handleClick(event, value){
+
+    }
+
+    render(){
+        return(
+            <IconMenu
+                iconButtonElement={
+                    <FloatingActionButton tooltip="Add to Playlist" mini={true} style={{marginRight: "20px"}}>
+                        <ContentAdd />
+                    </FloatingActionButton>
+                }
+                onChange={this.handleClick.bind(this)}
+            >
+                <MenuItem value="1" primaryText="Inspirational" />
+                <MenuItem value="2" primaryText="Romantic" />
+                <Divider />
+                <MenuItem value="3" primaryText="New Playlist" />
+            </IconMenu>
+        )
+    }
+}
+
+const videoOptionsStyles = {
+    margin: "10px auto auto"
+};
+
 export class VideoOptions extends Component {
 
     constructor(props){
@@ -108,7 +147,7 @@ export class VideoOptions extends Component {
     render(){
         const {likes, repeats, downloads} = this.props.data;
         return(
-            <div className="container-fluid">
+            <div className="container-fluid text-center" style={videoOptionsStyles}>
                 <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 
                 </div>
@@ -124,7 +163,7 @@ export class VideoOptions extends Component {
                     </IconMenu>
                 </div>
                 <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-
+                    <Playlist/>
                 </div>
             </div>
         )

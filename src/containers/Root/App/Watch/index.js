@@ -5,6 +5,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import {  } from './actions';
 import {VideoContainer} from './components';
+import Navigation from '../../../../components/Navigation';
 
 function mapStateToProps(state) {
     return {
@@ -36,7 +37,7 @@ class Overview extends Component {
         return (
             <section className="content">
                 <div className="col-lg-2 col-md-2 visible-lg visible-md">
-
+                    <Navigation/>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-7">
                     <VideoContainer/>

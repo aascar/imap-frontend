@@ -142,6 +142,60 @@ export class Playlist extends Component{
     }
 }
 
+export class Download extends Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+
+        };
+    }
+
+    handleClick(event, value){
+
+    }
+
+    render(){
+        return(
+            <IconMenu
+                iconButtonElement={<IconButton tooltip="Download"><DownloadIcon /></IconButton>}
+                onChange={this.handleClick.bind(this)}>
+                <MenuItem value="1" primaryText="720p" />
+                <MenuItem value="2" primaryText="360p" />
+                <MenuItem value="3" primaryText="240p" />
+                <MenuItem value="4" primaryText="144p" />
+                <MenuItem value="5" primaryText="144Mp3" />
+            </IconMenu>
+        )
+    }
+}
+
+export class Share extends Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+
+        };
+    }
+
+    handleClick(event, value){
+
+    }
+
+    render(){
+        return(
+            <IconMenu
+                iconButtonElement={<IconButton tooltip="Share"><ShareIcon/></IconButton>}
+                onChange={this.handleClick.bind(this)}>
+                <MenuItem value="1" primaryText="Facebook" />
+                <MenuItem value="2" primaryText="Twitter" />
+                <MenuItem value="3" primaryText="Google+" />
+            </IconMenu>
+        )
+    }
+}
+
 const videoOptionsStyles = {
     margin: "5px auto auto"
 };
@@ -155,30 +209,27 @@ export class VideoOptions extends Component {
         };
     }
 
-    handleDownloadClick(event, value){
-
-    }
-
     render(){
         const {likes, repeats, downloads} = this.props.data;
         return(
             <div className="container-fluid fluid text-center" style={videoOptionsStyles}>
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-
+                <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    
                 </div>
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <IconMenu
-                        iconButtonElement={<IconButton tooltip="Download"><DownloadIcon /></IconButton>}
-                        onChange={this.handleDownloadClick.bind(this)}>
-                        <MenuItem value="1" primaryText="720p" />
-                        <MenuItem value="2" primaryText="360p" />
-                        <MenuItem value="3" primaryText="240p" />
-                        <MenuItem value="4" primaryText="144p" />
-                        <MenuItem value="5" primaryText="144Mp3" />
-                    </IconMenu>
+                <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <IconButton tooltip="Select Repeat Range"><HeartIcon /></IconButton>
                 </div>
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <IconButton tooltip="Mark as Favorite"><HeartIcon /></IconButton>
+                </div>
+                <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <Download/>
+                </div>
+                <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                     <Playlist/>
+                </div>
+                <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <Share/>
                 </div>
             </div>
         )
@@ -194,8 +245,8 @@ export class VideoData extends Component {
                 <div className="col-lg-5 col-md-5 col-sm-5 col-xs-5">
                     <VideoMetrics data={{}}/>
                 </div>
-                <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div className="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <VideoOptions data={{}}/>
                 </div>
             </div>

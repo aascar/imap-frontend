@@ -41,7 +41,7 @@ export default class Playlist extends Component{
         return(
             <div className="container-fluid fluid">
                 <Paper style={style.paper}>
-                    <Menu listStyle={{width: '100%'}}>
+                    <Menu>
                         <MenuItem primaryText="Preview" leftIcon={<RemoveRedEye />} />
                         <MenuItem primaryText="Share" leftIcon={<PersonAdd />} />
                         <MenuItem primaryText="Get links" leftIcon={<ContentLink />} />

@@ -35,7 +35,7 @@ class Overview extends Component {
         const { appState, params, location } = this.props;
         const { v } = location.query;
         return (
-            <section className="content">
+            <section className="content row">
                 <div className="col-lg-2 col-md-2 visible-lg visible-md">
                     <Navigation/>
                 </div>
@@ -43,7 +43,7 @@ class Overview extends Component {
                     <VideoContainer/>
                 </div>
                 <div className="col-lg-4 col-md-4 col-sm-5">
-
+                    <Navigation/>
                 </div>
             </section>
         );

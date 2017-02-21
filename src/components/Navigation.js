@@ -16,11 +16,12 @@ import FontIcon from 'material-ui/FontIcon';
 
 const style = {
     paper: {
-        //display: 'inline-block',
-        //float: 'left',
-        //marginRight: '32px',
         minHeight: '100%',
         width: '100%'
+    },
+    listStyle: {
+        width: '100%',
+        display: 'inline-block'
     }
 };
 
@@ -39,20 +40,18 @@ export default class Playlist extends Component{
 
     render(){
         return(
-            <div className="container-fluid fluid">
-                <Paper style={style.paper}>
-                    <Menu>
-                        <MenuItem primaryText="Preview" leftIcon={<RemoveRedEye />} />
-                        <MenuItem primaryText="Share" leftIcon={<PersonAdd />} />
-                        <MenuItem primaryText="Get links" leftIcon={<ContentLink />} />
-                        <Divider />
-                        <MenuItem primaryText="Make a copy" leftIcon={<ContentCopy />} />
-                        <MenuItem primaryText="Download" leftIcon={<Download />} />
-                        <Divider />
-                        <MenuItem primaryText="Remove" leftIcon={<Delete />} />
-                    </Menu>
-                </Paper>
-            </div>
+            <Paper zDepth={1} style={style.paper}>
+                <Menu listStyle={style.listStyle} width={'100%'} autoWidth={false}>
+                    <MenuItem primaryText="Preview" leftIcon={<RemoveRedEye />} />
+                    <MenuItem primaryText="Share" leftIcon={<PersonAdd />} />
+                    <MenuItem primaryText="Get links" leftIcon={<ContentLink />} />
+                    <Divider />
+                    <MenuItem primaryText="Make a copy" leftIcon={<ContentCopy />} />
+                    <MenuItem primaryText="Download" leftIcon={<Download />} />
+                    <Divider />
+                    <MenuItem primaryText="Remove" leftIcon={<Delete />} />
+                </Menu>
+            </Paper>
         )
     }
 }

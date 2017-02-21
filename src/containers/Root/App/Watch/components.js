@@ -22,6 +22,7 @@ import HeartIcon from 'material-ui/svg-icons/action/favorite-border';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import Divider from 'material-ui/Divider';
+import VideoMetrics from '../../../../components/VideoMetrics';
 
 export class Video extends Component{
 
@@ -75,39 +76,6 @@ export class Video extends Component{
         )
     }
 
-}
-
-const metricIconStyles = {
-    display: 'inline',
-    float: 'left'
-};
-
-const metricStyles = {
-    display: 'inline',
-    float: 'right'
-};
-
-export class VideoMetrics extends Component {
-
-    render(){
-        const {likes, repeats, downloads} = this.props.data;
-        return(
-            <div className="container-fluid fluid">
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <IconButton style={metricIconStyles} tooltip="Likes"><HeartedIcon /></IconButton>
-                    <span style={metricStyles}>23 K</span>
-                </div>
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <IconButton tooltip="Repeats"><RepeatIcon /></IconButton>
-                    <span style={metricStyles}>56 K</span>
-                </div>
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <IconButton tooltip="Downloads"><DownloadIcon /></IconButton>
-                    <span style={metricStyles}>21 K</span>
-                </div>
-            </div>
-        )
-    }
 }
 
 export class Playlist extends Component{
@@ -214,7 +182,7 @@ export class VideoOptions extends Component {
         return(
             <div className="container-fluid fluid text-center" style={videoOptionsStyles}>
                 <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                    
+
                 </div>
                 <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                     <IconButton tooltip="Select Repeat Range"><HeartIcon /></IconButton>

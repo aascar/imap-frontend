@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import {  } from './actions';
 import {VideoContainer} from './components';
 import Navigation from '../../../../components/Navigation';
+import MediumVideoList from '../../../../components/MediumVideoList';
 
 function mapStateToProps(state) {
     return {
@@ -21,7 +22,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-class Overview extends Component {
+class Watch extends Component {
 
     componentWillMount(){
 
@@ -43,22 +44,22 @@ class Overview extends Component {
                     <VideoContainer/>
                 </div>
                 <div className="col-lg-4 col-md-4 col-sm-5">
-                    <Navigation/>
+                    <MediumVideoList/>
                 </div>
             </section>
         );
     }
 }
 
-Overview.propTypes = {
+Watch.propTypes = {
 
 };
 
-Overview.contextTypes = {
+Watch.contextTypes = {
     router: PropTypes.object.isRequired,
 };
 
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Overview);
+)(Watch);

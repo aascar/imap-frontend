@@ -9,6 +9,7 @@ import IconButton from 'material-ui/IconButton';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import {Login, Logged} from './components';
 import Footer from '../../../components/Footer';
+import AutoComplete from '../../../components/AutoComplete';
 
 function mapStateToProps(state) {
     return {
@@ -67,7 +68,7 @@ class App extends Component{
             <MuiThemeProvider muiTheme={/*getMuiTheme(darkBaseTheme)*/ null}>
                 <div style={wrapperStyles}>
                     <AppBar
-                        title="UrYouTube"
+                        title={<AutoComplete />}
                         iconElementLeft={<IconButton><NavigationClose /></IconButton>}
                         iconElementRight={!this.state.logged ? <Logged /> : <Login />}
                     />

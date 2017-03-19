@@ -57,7 +57,7 @@ export default class VideoMetrics extends Component {
     }
 }
 
-export const VideoAttributes = (props) => (
+export const SmallVideoAttributes = (props) => (
     <ul className="nav video-attributes">
         <li role="presentation">
             <h6 className="media-heading">
@@ -77,7 +77,6 @@ export const VideoAttributes = (props) => (
     </ul>
 );
 
-//TODO:
 export const MediumVideoMetrics = (props) => (
     <ul className="nav video-attributes">
         <li role="presentation">

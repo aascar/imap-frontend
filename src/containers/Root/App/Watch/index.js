@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import {  } from './actions';
 import {VideoContainer} from './components';
 import Navigation from '../../../../components/Navigation';
-import MediumVideoList from '../../../../components/MediumVideoList';
+import MediumVideoList from '../../../../components/LargeVideoList';
 import RightBar from '../../../../components/RightBar';
 
 function mapStateToProps(state) {

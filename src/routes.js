@@ -2,7 +2,8 @@ import React from 'react'
 import {Route, IndexRedirect} from 'react-router';
 import {END_POINTS} from './constants/EndPoints';
 import Application from './containers/Root/App';
-import Watch from './containers/Root/App/Watch';
+import WithSideNav from './containers/Root/App/WithSideNav';
+import Watch from './containers/Root/App/WithSideNav/Watch';
 import About from './containers/Root/App/StaticContent/About';
 import Help from './containers/Root/App/StaticContent/Help';
 import Terms from './containers/Root/App/StaticContent/Terms';
@@ -14,6 +15,9 @@ import Repeat from './containers/Root/App/StaticContent/SEO/Repeat';
 const router =
     <Route path="/" component={Application}>
         <IndexRedirect to={END_POINTS.WATCH}/>
+        <Route component={WithSideNav}>
+            <Route path={END_POINTS.WATCH} component={Watch}/>
+        </Route>
         <Route path={END_POINTS.WATCH} component={Watch} />
         <Route path={END_POINTS.ABOUT} component={About} />
         <Route path={END_POINTS.CONTACT} component={Watch} />

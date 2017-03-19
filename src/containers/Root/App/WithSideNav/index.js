@@ -1,11 +1,11 @@
 /**
- * Created by jyothi on 16/2/17.
+ * Created by jyothi on 19/3/17.
  */
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import {  } from './actions';
-import Navigation from '../../../../../components/Navigation';
-import RightBar from '../../../../../components/RightBar';
+import Navigation from '../../../../components/Navigation';
+import MediumVideoList from '../../../../components/LargeVideoList';
+import RightBar from '../../../../components/RightBar';
 
 function mapStateToProps(state) {
     return {
@@ -21,43 +21,40 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-class Watch extends Component {
+class SiteContent extends Component {
 
     componentWillMount(){
 
     }
 
     componentWillUnmount(){
-        this.props.resetData();
+
     }
 
     render() {
         const { appState, params, location } = this.props;
-        const { v } = location.query;
         return (
-            <div className="row">
-                <div className="col-lg-7 col-md-7 col-sm-7">
-                    <VideoContainer/>
+            <section className="content row">
+                <div className="col-lg-2 col-md-2 visible-lg visible-md">
+                    <Navigation/>
                 </div>
-                <div className="col-lg-5 col-md-5 col-sm-5">
-                    <RightBar>
-
-                    </RightBar>
+                <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    {this.props.children}
                 </div>
-            </div>
+            </section>
         );
     }
 }
 
-Watch.propTypes = {
+SiteContent.propTypes = {
 
 };
 
-Watch.contextTypes = {
+SiteContent.contextTypes = {
     router: PropTypes.object.isRequired,
 };
 
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Watch);
+)(SiteContent);

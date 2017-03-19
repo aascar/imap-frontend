@@ -165,7 +165,7 @@ export class Share extends Component{
 }
 
 const videoOptionsStyles = {
-    margin: "5px auto auto"
+    margin: "0px auto auto"
 };
 
 export class VideoOptions extends Component {
@@ -180,7 +180,7 @@ export class VideoOptions extends Component {
     render(){
         const {likes, repeats, downloads} = this.props.data;
         return(
-            <div className="container-fluid fluid text-center" style={videoOptionsStyles}>
+            <div className="row text-center" style={videoOptionsStyles}>
                 <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2">
 
                 </div>
@@ -210,11 +210,12 @@ export class VideoData extends Component {
         const {} = this.props;
         return(
             <div className="container-fluid fluid">
-                <div className="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                    <MediumVideoMetrics data={{}}/>
+                <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div style={{paddingTop: '1.5rem'}}>
+                        <MediumVideoMetrics data={{}}/>
+                    </div>
                 </div>
-                <div className="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-                <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <VideoOptions data={{}}/>
                 </div>
             </div>
@@ -223,7 +224,7 @@ export class VideoData extends Component {
 }
 
 const videoContainerStyles = {
-    padding: "10px"
+    padding: "5px"
 };
 
 export class VideoContainer extends Component {

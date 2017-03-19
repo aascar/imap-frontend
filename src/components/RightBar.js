@@ -7,7 +7,8 @@ import Subheader from 'material-ui/Subheader';
 import Paper from 'material-ui/Paper';
 
 const rightBarStyles = {
-    width: '100%'
+    width: '100%',
+    minHeight: '100%'
 };
 
 export default class RightBar extends Component {

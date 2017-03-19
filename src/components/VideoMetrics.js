@@ -80,19 +80,19 @@ export const SmallVideoAttributes = (props) => (
 export const MediumVideoMetrics = (props) => (
     <ul className="nav video-attributes">
         <li role="presentation">
-            <h6 className="media-heading">
+            <h4 className="media-heading">
                 <span title="Likes">{props.likes || 0}</span> <i className="fa fa-heart-o text-danger"></i>
-            </h6>
+            </h4>
         </li>
         <li role="presentation">
-            <h6 className="media-heading">
+            <h4 className="media-heading">
                 <span title="Repeats">{props.repeats || 0}</span> <i className="fa fa-repeat text-success"></i>
-            </h6>
+            </h4>
         </li>
         <li role="presentation">
-            <h6 className="media-heading">
+            <h4 className="media-heading">
                 <span title="Downloads">{props.downloads || 0}</span> <i className="fa fa-download text-info"></i>
-            </h6>
+            </h4>
         </li>
     </ul>
 );

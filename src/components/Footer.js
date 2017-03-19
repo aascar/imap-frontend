@@ -13,7 +13,7 @@ import ContactMailIcon from 'material-ui/svg-icons/communication/contact-mail';
 import AssignmentIcon from 'material-ui/svg-icons/action/assignment';
 
 const footerStyles = {
-    position: 'absolute',
+    //position: 'absolute',
     right: 0,
     bottom: 0,
     left: 0,

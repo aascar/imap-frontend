@@ -10,7 +10,7 @@ html, body{
 
 section.content{
     width: 100%;
-    padding: 15px;
+    padding: 15px 15px 56px 15px;
 }
 
 .text-wrap{

@@ -76,13 +76,17 @@ class App extends Component{
                         {this.props.children}
                     </div>
                     <div style={footerStyles}>
-                        <Footer/>
+                        <Footer router={this.context.router}/>
                     </div>
                 </div>
             </MuiThemeProvider>
         )
     }
 }
+
+App.contextTypes = {
+    router: PropTypes.object.isRequired,
+};
 
 export default connect(
     mapStateToProps,

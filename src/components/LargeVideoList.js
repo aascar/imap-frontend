@@ -27,7 +27,9 @@ export const LargeVideoItem = (props) => (
             </div>
             <div className="media-body">
                 <h4 className="media-heading">{props.title}</h4>
-                <MediumVideoMetrics {...props}/>
+                { props.noAttributes && <strong className="text-success channel-name">{props.channel}</strong> }
+                { props.noAttributes && <p className="text-success channel-name">{props.description}</p> }
+                { !props.noAttributes && <MediumVideoMetrics {...props}/> }
             </div>
         </a>
     </li>

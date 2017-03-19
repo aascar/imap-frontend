@@ -24,7 +24,8 @@ export const VideoItem = (props) => (
         <Link to={`/watch?v=${props._id}`}>
             <img src={props.img} alt={props.title} className="media-object trending-image"/>
             <h6 className="trending-title">{props.title}</h6>
-            <SmallVideoAttributes {...props}/>
+            { props.noAttributes && <h6 className="text-success channel-name">{props.channel}</h6> }
+            { !props.noAttributes && <SmallVideoAttributes {...props}/> }
         </Link>
     </li>
 );

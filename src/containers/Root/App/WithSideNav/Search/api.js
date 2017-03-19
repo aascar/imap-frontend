@@ -1,8 +1,8 @@
 /**
  * Created by jyothi on 16/2/17.
  */
-import { callApi } from '../../../../api';
-import { makeDefaultQueryString} from '../../../../utils';
+import { callApi } from '../../../../../api';
+import { makeDefaultQueryString} from '../../../../../utils';
 
 const VIDEO_INFO_API = "";
 

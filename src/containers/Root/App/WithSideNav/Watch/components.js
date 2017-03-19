@@ -22,7 +22,7 @@ import HeartIcon from 'material-ui/svg-icons/action/favorite-border';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import Divider from 'material-ui/Divider';
-import VideoMetrics from '../../../../components/VideoMetrics';
+import VideoMetrics, {MediumVideoMetrics} from '../../../../../components/VideoMetrics';
 
 export class Video extends Component{
 
@@ -211,7 +211,7 @@ export class VideoData extends Component {
         return(
             <div className="container-fluid fluid">
                 <div className="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                    <VideoMetrics data={{}}/>
+                    <MediumVideoMetrics data={{}}/>
                 </div>
                 <div className="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
                 <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">

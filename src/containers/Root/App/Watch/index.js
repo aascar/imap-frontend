@@ -7,6 +7,7 @@ import {  } from './actions';
 import {VideoContainer} from './components';
 import Navigation from '../../../../components/Navigation';
 import MediumVideoList from '../../../../components/MediumVideoList';
+import RightBar from '../../../../components/RightBar';
 
 function mapStateToProps(state) {
     return {
@@ -44,7 +45,9 @@ class Watch extends Component {
                     <VideoContainer/>
                 </div>
                 <div className="col-lg-4 col-md-4 col-sm-5">
-                    <MediumVideoList/>
+                    <RightBar>
+
+                    </RightBar>
                 </div>
             </section>
         );
